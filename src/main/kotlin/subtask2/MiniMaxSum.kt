@@ -4,6 +4,11 @@ class MiniMaxSum {
 
     // TODO: Complete the following function
     fun getResult(input: IntArray): IntArray {
-        throw NotImplementedError("Not implemented")
+
+        val totalSum = input.sum()
+        val sortedArray = input.sortedArray()
+        val minimumSum = totalSum - sortedArray.last()
+        val maximumSum = totalSum - sortedArray.first()
+        return intArrayOf(minimumSum, maximumSum)
     }
 }
